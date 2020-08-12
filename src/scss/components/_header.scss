@@ -1,0 +1,74 @@
+.icon-hamburguer {
+    --radio: calc(48 / 16 * 1rem);
+    --border-width: calc(3 / 16 * 1rem);
+    align-items: center;
+    border: var(--border-width) solid;
+    border-radius: 50%;
+    width: var(--radio);
+    height: var(--radio);
+    position: relative;
+
+    &__line,
+    &::before,
+    &::after {
+        background-color: currentColor;
+        height: var(--border-width);
+        position: absolute;
+        right: 50%;
+        width: 62%;
+    }
+    
+    &::before,
+    &::after {
+        content: '';
+        transform: translate(50%, 0);
+    }
+    
+    &::before {
+        top: 25%;
+    }
+    
+    &__line {
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+    
+    &::after {
+        bottom: 25%;
+    }
+}
+
+.icon-close {
+    --radio: calc(48 / 16 * 1rem);
+    --border-width: calc(3 / 16 * 1rem);
+    align-items: center;
+    border: var(--border-width) solid;
+    border-radius: 50%;
+    width: var(--radio);
+    height: var(--radio);
+    position: relative;
+
+    &::before,
+    &::after {
+        background-color: currentColor;
+        height: var(--border-width);
+        position: absolute;
+        right: 50%;
+        width: 66%;
+    }
+    
+    &::before,
+    &::after {
+        content: '';
+        top: 50%;
+    }
+    
+    &::before {
+        transform: translate(50%, -50%) rotate(45deg);
+        
+    }
+    
+    &::after {
+        transform: translate(50%, -50%) rotate(-45deg);
+    }
+}
