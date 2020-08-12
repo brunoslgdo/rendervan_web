@@ -1,7 +1,72 @@
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
 
 *, *::before, *::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0; }
+
+.logo {
+  --logo-size: 2rem;
+  --slogan-size: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: var(--logo-size);
+  line-height: 1;
+  text-align: center; }
+  @media only screen and (min-width: 736px) {
+    .logo {
+      text-align: initial; } }
+  .logo__slogan {
+    font-size: var(--slogan-size);
+    font-weight: 400; }
+
+.icon-hamburguer {
+  --radio: calc(48 / 16 * 1rem);
+  --border-width: calc(3 / 16 * 1rem);
+  align-items: center;
+  border: var(--border-width) solid;
+  border-radius: 50%;
+  width: var(--radio);
+  height: var(--radio);
+  position: relative; }
+  .icon-hamburguer__line, .icon-hamburguer::before, .icon-hamburguer::after {
+    background-color: currentColor;
+    height: var(--border-width);
+    position: absolute;
+    right: 50%;
+    width: 62%; }
+  .icon-hamburguer::before, .icon-hamburguer::after {
+    content: '';
+    transform: translate(50%, 0); }
+  .icon-hamburguer::before {
+    top: 25%; }
+  .icon-hamburguer__line {
+    top: 50%;
+    transform: translate(50%, -50%); }
+  .icon-hamburguer::after {
+    bottom: 25%; }
+
+.icon-close {
+  --radio: calc(48 / 16 * 1rem);
+  --border-width: calc(3 / 16 * 1rem);
+  align-items: center;
+  border: var(--border-width) solid;
+  border-radius: 50%;
+  width: var(--radio);
+  height: var(--radio);
+  position: relative; }
+  .icon-close::before, .icon-close::after {
+    background-color: currentColor;
+    height: var(--border-width);
+    position: absolute;
+    right: 50%;
+    width: 66%; }
+  .icon-close::before, .icon-close::after {
+    content: '';
+    top: 50%; }
+  .icon-close::before {
+    transform: translate(50%, -50%) rotate(45deg); }
+  .icon-close::after {
+    transform: translate(50%, -50%) rotate(-45deg); }
