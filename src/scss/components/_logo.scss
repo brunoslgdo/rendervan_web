@@ -1,9 +1,10 @@
 .logo {
-    --logo-size: 2rem;
-    --slogan-size: 1rem;
+    --logo-size: calc(30 / 16 * 1rem);
+    --slogan-size: calc(14 / 16 * 1rem);
     display: inline-flex;
     flex-direction: column;
     font-size: var(--logo-size);
+    font-weight: 900;
     line-height: 1;
     text-align: center;
 
