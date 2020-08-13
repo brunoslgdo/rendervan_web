@@ -1,5 +1,7 @@
-.icon-hamburguer: .icon-hamburguer__line
-ul.menu
-    each item in MENU
-        li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.content}`
-.icon-close
+header.header
+    include logo
+    nav.nav
+        ul.menu.hide#menu
+            each item in MENU
+                li.menu__item: a(href=`${item.href}`, class="menu__link")= `${item.content}`
+        .icon-hamburguer#icon-hamburguer: .icon-hamburguer__line
